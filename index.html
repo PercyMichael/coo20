@@ -8,88 +8,77 @@
     <title>Countdown Timer</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-         body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        /* Style the video to cover the entire body */
-        video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Add any additional styles for your content on top of the video */
-        .content {
-            position: relative;
-            z-index: 1; /* Place it on top of the video */
-            text-align: center;
-            padding: 20px;
-            color: white; /* Example text color */
-        }
-
-          /* Add a black overlay to the specific div */
-        .overlay {
-            background-color: rgba(0, 0, 0, 1); /* Adjust the opacity (0.5) for your desired level of darkness */
-        }
-    </style>
+   
 </head>
 
-<body class="bg-cover"
-   >
-    <video autoplay muted loop>
-        <!-- Provide different video sources for cross-browser compatibility -->
-        <source src="./group.mp4" type="video/mp4">
-     
-        Your browser does not support the video tag.
-    </video>
-    <div class="h-[100vh] text-white flex flex-col justify-center items-center">
+<body class="bg-black">
+    
+       
+    <div class="h-[100vh] text-white flex flex-col max-w-7xl mx-auto">
+        <div class="flex justify-end px-3 py-8 gap-x-3">
+            <a href="https://coopbusiness.com/register" rel="noopener noreferrer">
+                <button class="px-2 py-1 text-sm md:px-5 md:py-2 rounded-md ">Log In</button>
+            </a>
+            <a href="https://coopbusiness.com/register" rel="noopener noreferrer">
+                <button class="px-2 py-1 text-sm md:px-5 md:py-2 bg-[#FFCC01] text-black rounded-lg ">Sign Up</button>
+            </a>
+        </div>
 
-        <!-- <img src="./elegant-man-with-sign.png" alt="" srcset="" class="w-1/5 mx-uto"> -->
-        <div class="w-full h-full bg-black bg-opacity-60 backdrop-blur-lg rounded drop-shadow-lg overlay flex  items-center justify-center">
-           <!-- BORDER -->
-            <div class="mx-auto border w-full md:w-1/2 text-center p-5 flex flex-col gap-y-5 text-center">
-                <img src="logo2.png" class="w-[250px] sm:w-[100px] mx-auto" alt="">
-                <h1 class="text-3xl md:text-5xl  md:font-bold font-black text-center">A 21st Century Income for a 21st Century economy.</h1>
-                <p class="text-center">In the 21st Century you can’t survive with a 9-5, you need a new kind of income to thrive! Coop20 build a Predictable
-                Ongoing Passive Income with $20 and by completing 2 simple doable steps – one time!</p>
-                <h2 class="md:font-black font-bold text-sm md:text-2xl flex text-center justify-center"><img class="w-10 p-2" src="launch.svg" alt="">Launching in</h2>
-                <div class="flex justify-evenly">
-                    <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg p-5 text-white rounded-md w-[100px] text-center">
-                        <p id="days" class="countdown text-5xl font-black"></p>
-                        <span>Days</span>
+        <div class="flex md:flex-row flex-col  justify-center h-full">
+            <div class="md:w-1/2 flex justify-center">
+                <img src="./elegant-man-with-sign.png" alt="" srcset="" class="md:w-4/5 w-1/2 mt-5">
+            </div>
+            <div
+                class="md:w-2/4 w-full px-5 md:px-0 h-full bg-black bg-opacity-60 backdrop-blur-lg rounded drop-shadow-lg overlay flex items-center justify-center">
+                <!-- BORDER -->
+                <div class="mx-auto w-full text-center py-5 flex flex-col gap-y-5 text-left">
+                    <h1 class="text-3xl md:text-5xl md:font-bold font-black md:text-left text-center">A 21st Century Income for a 21st
+                        Century economy.</h1>
+                    <p class="text-left">In the 21st Century you can’t survive with a 9-5, you need a new kind of income
+                        to thrive! Coop20 build a Predictable
+                        Ongoing Passive Income with $20 and by completing 2 simple doable steps – one time!</p>
+                        <div class="my-2 w-full text-left">
+                            <a href="https://coopbusiness.com/register" rel="noopener noreferrer">
+                                <button class="px-2 py-1 text-sm md:px-5 md:py-2 bg-[#FFCC01] text-black rounded-lg">Join Now</button>
+                            </a>
+                        </div>
+                    <h2 class="font-black text-2xl flex">Launching in</h2>
+                    <div class="flex justify-between">
+                        <div
+                            class="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg p-5 text-white rounded-md w-[100px] text-center">
+                            <p id="days" class="countdown text-3xl md:text-5xl font-black text-[#FFCC01]"></p>
+                            <span class="text-xs md:text-sm">Days</span>
+                        </div>
+        
+                        <div
+                            class="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg p-5 text-white rounded-md w-[100px] text-center">
+                            <p id="hours" class="countdown text-3xl md:text-5xl font-black text-[#FFCC01]"></p>
+                            <span class="text-xs md:text-sm">Hours</span>
+                        </div>
+        
+                        <div
+                            class="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg p-5 text-white rounded-md w-[100px] text-center">
+                            <p id="mins" class="countdown text-3xl md:text-5xl font-black text-[#FFCC01]"></p>
+                            <span class="text-xs md:text-sm">Minutes</span>
+                        </div>
+        
+                        <div
+                            class="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg p-5 text-white rounded-md w-[100px] text-center">
+                            <p id="secs" class="countdown text-3xl md:text-5xl font-black text-[#FFCC01]"></p>
+                            <span class="text-xs md:text-sm">Seconds</span>
+                        </div>
+        
+                        <h2 id="end"></h2>
+        
                     </div>
-
-                    <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg p-5 text-white rounded-md w-[100px] text-center">
-                        <p id="hours" class="countdown text-5xl font-black"></p>
-                        <span>Hours</span>
-                    </div>
-
-                    <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg p-5 text-white rounded-md w-[100px] text-center">
-                        <p id="mins" class="countdown text-5xl font-black"></p>
-                        <span>Minutes</span>
-                    </div>
-
-                    <div class="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg p-5 text-white rounded-md w-[100px] text-center">
-                        <p id="secs" class="countdown text-5xl font-black"></p>
-                        <span>Seconds</span>
-                    </div>
-                    
-                    <h2 id="end"></h2>
                     
                 </div>
-                <div><button class="px-5 py-3 bg-yellow-500 rounded-md uppercase">Notify Me</button></div>
+        
             </div>
-
         </div>
-        <!-- <div class="w-72 h-72 bg-white bg-opacity-40 backdrop-blur-md rounded drop-shadow-lg"></div>
-        <div class="w-72 h-72 bg-white bg-opacity-50 backdrop-blur-xl rounded drop-shadow-lg"></div> -->
+
+       
+       
     </div>
 
 
