@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
+    <title>Coop20 Launch</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
 
 
@@ -26,7 +27,7 @@
 
         <div class="flex md:flex-row flex-col  justify-center h-full">
             <div class="md:w-1/2 flex justify-center">
-                <img src="./elegant-man-with-sign.png" alt="" srcset="" class="md:w-4/5 w-1/2 mt-5">
+                <img src="./elegant-man-with-sign.webp" alt="" srcset="" class="md:w-[500px] w-[300px] mt-5">
             </div>
             <div
                 class="md:w-2/4 w-full px-5 md:px-0 h-full bg-black bg-opacity-60 backdrop-blur-lg rounded drop-shadow-lg overlay flex items-center justify-center">
@@ -45,7 +46,8 @@
                                 Now</button>
                         </a>
                     </div>
-                    <h2 class="font-black text-2xl flex">Launching in</h2>
+                    <h2 class="font-black text-2xl flex">Launching on </h2>
+                    <h3 class="text-left text-[#FFCC01]">October 15, 2023, at 9:45 AM EST</h3>
                     <div class="flex justify-between md:gap-x-1 gap-x-1">
                         <div
                             class="bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg md:p-5 text-white rounded-md w-16 md:w-[100px] flex flex-col justify-center text-center py-5">
@@ -88,7 +90,7 @@
     <script>
         window.onload = function () {
             // Set the target date to October 15, 2023, 2:00 PM in Eastern Standard Time (EST)
-            var targetDate = new Date('2023-10-15T14:00:00-05:00').getTime();
+            var targetDate = new Date('2023-10-15T09:45:00').getTime();
 
             var myfunc = setInterval(function () {
                 var now = new Date().getTime();
